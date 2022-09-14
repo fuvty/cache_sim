@@ -27,3 +27,7 @@ Release/
 
 # CMake
 cmake-build-debug/
+
+################################ by tianyu
+build/
+trace/
