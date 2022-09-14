@@ -5,8 +5,8 @@ using namespace std;
 void PrintOutput(void)
 {
     cout << endl;
-    cout << "Cache Size:" << i_cache_size << "KB" << endl;
-    cout << "Cacheline Size:" << i_cache_line_size << "B" << endl;
+    cout << "Cache Size:" << i_cache_size << "K word" << endl;
+    cout << "Cacheline Size:" << i_cache_line_size << "word" << endl;
 
     switch (t_assoc)
     {

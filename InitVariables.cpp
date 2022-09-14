@@ -38,7 +38,9 @@ void InitVariables(void)
     bit_block = 0;             //How many bits of the block.
     bit_line = 0;              //How many bits of the line.
     bit_tag = 0;               //How many bits of the tag.
+    bit_tag_inv_mask = ~ ( (1ull << (32 - bit_tag)) - 1 ); // 1111000000, num of 1 equals bit_tag
     bit_set = 0;               //How many bits of the set.
+    bit_set_mask = (1u << bit_set) - 1;
     i_num_access = 0;          //Number of cache access
     i_num_load = 0;            //Number of cache load
     i_num_store = 0;           //Number of cache store

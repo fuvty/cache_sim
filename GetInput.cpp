@@ -1,4 +1,12 @@
 ﻿#include "base.h"
+#include <string>
+extern int arg_cacheSize;
+extern int arg_cacheLineSize;
+extern int arg_placement_policy;
+extern int arg_associativity;
+extern int arg_replacement_policy;
+extern int arg_write_policy;
+
 
 using namespace std;
 
@@ -6,7 +14,7 @@ void getCacheSize()
 {
 	puts("\nInput the number of the cache size(Unit:KB)");
 	puts("\n\t(for example:1,2,4,8,16,32,64...2^18)");
-	cin >> i_cache_size;
+	i_cache_size = arg_cacheSize;
 	if (cin.fail())
 	{
 		cin.clear();
@@ -22,7 +30,7 @@ void getCacheLineSize()
 {
 	puts("\nInput the number of the cacheline size(Unit:Byte)");
 	puts("\n\t(for example:1,2,4,8,16,32,64...2^18)");
-	cin >> i_cache_line_size;
+	i_cache_line_size = arg_cacheLineSize;
 	if (cin.fail())
 	{
 		cin.clear();
@@ -41,7 +49,7 @@ void getMappingMethod()
 	puts("\n\t directive_mapped:input 1");
 	puts("\n\t set_associative:input 2");
 	puts("\n\t full_associative:input 3");
-	cin >> temp;
+	temp = arg_placement_policy;
 	if (cin.fail())
 	{
 		cin.clear();
@@ -67,7 +75,7 @@ void getLineCountEachSet()
 {
 	puts("\nInput the how many lines in each set:");
 	puts("\n\t(for example:1,2,4,8,16,32,64...2^18)");
-	cin >> i_cache_set;
+	i_cache_set = arg_associativity;
 	if (cin.fail())
 	{
 		cin.clear();
@@ -87,7 +95,7 @@ void getReplacePolicy()
 	puts("\n\t LRU(Least Recently Used):input 2");
 	puts("\n\t LFU(Least Frequently Used):input 3");
 	puts("\n\t Random:input 4");
-	cin >> temp;
+	temp = arg_replacement_policy;
 	if (cin.fail())
 	{
 		cin.clear();
@@ -118,7 +126,7 @@ void getWritePolicy()
 	puts("\nInput write policy:");
 	puts("\n\t Write through:input 1");
 	puts("\n\t Write back:input 2");
-	cin >> temp;
+	temp = arg_write_policy;
 	if (cin.fail())
 	{
 		cin.clear();
@@ -158,4 +166,5 @@ void GetInput(void)
 		getReplacePolicy();
 		getWritePolicy();
 	}
+	printf("Finished read all parameters\n");
 }

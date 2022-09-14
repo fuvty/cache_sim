@@ -1,3 +1,33 @@
+# Usage
+
+All Xiangyu's changes are made on branch `hpca`.
+
+BTW Jiangxin's code SUCKS...
+
+## Compiling
+Make sure you are on branch `hpca`.
+```sh
+git checkout hpca   # if you are not on branch hpca
+mkdir build
+cmake ..
+make
+```
+Now you should see the execuatble `build/CacheSim`.
+
+## Running
+`CacheSim` accepts standard input as parameters, which is dumb, so I wrote a shell script for convenience.
+```
+bash run.sh
+```
+You can modify parameters in `run.sh`.
+
+## Results
+`output/output.trace` is the output memory access pattern.
+
+`output/stdout.txt` is the standard output of CacheSim, redirected to a file.
+
+---
+
 # Cache模拟器(CacheSim)
 
 该程序是大学时《计算机组成与系统结构》的编程实验，我早已毕业多年，但是依然收到很多人的邮件咨询，所以简单描述一下。
