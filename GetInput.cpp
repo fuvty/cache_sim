@@ -12,8 +12,7 @@ void getCacheSize()
 		cin.clear();
 		cin.sync();
 	}
-	if (i_cache_size < 1 || i_cache_size >= 262144
-			|| (i_cache_size & (~i_cache_size + 1)) != i_cache_size)
+	if (i_cache_size < 1 || i_cache_size >= 262144 || (i_cache_size & (~i_cache_size + 1)) != i_cache_size)
 	{
 		getCacheSize();
 	}
@@ -29,9 +28,7 @@ void getCacheLineSize()
 		cin.clear();
 		cin.sync();
 	}
-	if (i_cache_line_size < 1 || i_cache_line_size >= 262144
-			|| (i_cache_line_size & (~i_cache_line_size + 1))
-					!= i_cache_line_size)
+	if (i_cache_line_size < 1 || i_cache_line_size >= 262144 || (i_cache_line_size & (~i_cache_line_size + 1)) != i_cache_line_size)
 	{
 		getCacheLineSize();
 	}
@@ -76,8 +73,7 @@ void getLineCountEachSet()
 		cin.clear();
 		cin.sync();
 	}
-	if (i_cache_set < 1 || i_cache_set >= 262144
-			|| (i_cache_set & (~i_cache_set + 1)) != i_cache_set)
+	if (i_cache_set < 1 || i_cache_set >= 262144 || (i_cache_set & (~i_cache_set + 1)) != i_cache_set)
 	{
 		getLineCountEachSet();
 	}
@@ -162,5 +158,4 @@ void GetInput(void)
 		getReplacePolicy();
 		getWritePolicy();
 	}
-
 }

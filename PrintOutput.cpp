@@ -8,7 +8,7 @@ void PrintOutput(void)
     cout << "Cache Size:" << i_cache_size << "KB" << endl;
     cout << "Cacheline Size:" << i_cache_line_size << "B" << endl;
 
-    switch(t_assoc)
+    switch (t_assoc)
     {
     case 1:
         cout << "Way of Associativity:direct_mapped" << endl;
@@ -27,7 +27,7 @@ void PrintOutput(void)
         break;
     }
 
-    switch(t_replace)
+    switch (t_replace)
     {
     case 0:
         cout << "Way of Replacement:NONE" << endl;
@@ -54,7 +54,7 @@ void PrintOutput(void)
         break;
     }
 
-    switch(t_write)
+    switch (t_write)
     {
     case 1:
         cout << "Way of Write:write_through" << endl;
@@ -74,9 +74,12 @@ void PrintOutput(void)
     cout << "Number of cache load:" << i_num_load << endl;
     cout << "Number of cache store:" << i_num_store << endl;
     cout << endl;
-    cout << "Average cache hit rate:" << f_ave_rate*100 << "%" << endl;
-    cout << "Cache hit rate for loads:" << f_load_rate*100 << "%" << endl;
-    cout << "Cache hit rate for stores:" << f_store_rate*100 << "%" << endl;
+    cout << "cache hit:" << i_num_hit << endl;
+    cout << "Cache hit for loads:" << i_num_load_hit << endl;
+    cout << "Cache hit for stores:" << i_num_store_hit << endl;
+    cout << endl;
+    cout << "Average cache hit rate:" << f_ave_rate * 100 << "%" << endl;
+    cout << "Cache hit rate for loads:" << f_load_rate * 100 << "%" << endl;
+    cout << "Cache hit rate for stores:" << f_store_rate * 100 << "%" << endl;
     cout << endl;
 }
-
