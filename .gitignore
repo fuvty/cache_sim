@@ -1,7 +1,3 @@
-##############################by jiangxin
-
-doxygen/
-
 # Vim
 *.swp
 
@@ -28,6 +24,5 @@ Release/
 # CMake
 cmake-build-debug/
 
-################################ by tianyu
+# build file
 build/
-trace/

@@ -10,9 +10,6 @@ void FileTest(void)
 {
     ifstream in_file;
     char address[13];
-    cout << "\nPlease input the path and name that you want to test!" << endl;
-    cout << "\n\t C:\\temp\\myfile.trace" << endl;
-    cout << "\n\t myfile.trace" << endl;
 
     in_file.open(arg_input_trace, ios::in);
     if (in_file.fail())
@@ -60,7 +57,7 @@ void FileTest(void)
 #ifdef TRACE
         if (!is_hit)
         {
-            sprintf(dimmaddr, "0x%08lx", (strtoulNum) & 0xffffffff);
+            sprintf(dimmaddr, "0x%08lx", (long unsigned int)((strtoulNum) & 0xffffffff));
             if (address[0] == 's')
             {
                 trace << dimmaddr << " W" << '\n';
